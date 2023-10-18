@@ -1,0 +1,11 @@
+.elements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0 auto 0 auto;
+    margin-bottom: 100px;
+    place-items: center;
+    max-width: 880px;
+    max-height: 744px;
+    
+}

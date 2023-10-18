@@ -1,26 +1,17 @@
- .page {
-        font-family: Inter;
-        margin: 0;
-        background-color: #000;
-        color: white;
-        overflow: hidden;
-    
-    }
-.header{
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
-    .elements {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        margin: 0 auto 0 auto;
-        margin-bottom: 100px;
-        place-items: center;
-        
-    }
-    .elements__element{
-        width: 100%;
-        max-width: 282px;
-        max-height: 361px;
-    }
+@import url(./fonts/inter.css);
+@import url(./blocks/page/page.css);
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/profile/__avatar/profile__avatar.css);
+@import url(./blocks/profile/__info/profile__info.css);
+@import url(./blocks/profile/__info/__info-name/profile__info-name.css);
+@import url(./blocks/profile/__info/__info-editbutton/profile__info-editbutton.css);
+@import url(./blocks/profile/__addbutton/profile__addbutton.css);
+@import url(./blocks/elements/elements.css);
+@import url(./blocks/elements/__element/elements__element.css);
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__text/footer__text.css);
+
+
+
