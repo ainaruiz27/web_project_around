@@ -1,0 +1,29 @@
+
+.profile__info-editbutton{
+    background: transparent url(../../../../images/editbutton.png)center no-repeat;
+    width: 24px;
+    height: 24px;
+    align-self: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor:pointer;
+    grid-area: button;
+    margin-top: 15px;
+    
+}
+.profile__info-editbutton{
+    opacity: 0.6;
+}
+
+@media screen and (max-width:767px) {
+    .profile__info-editbutton {
+       width: 18px;
+       height: 18px;
+       margin-top: 5px;
+       margin-left: 5px;
+     
+       
+       
+    }
+}

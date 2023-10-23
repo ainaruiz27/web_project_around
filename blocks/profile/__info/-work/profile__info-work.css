@@ -1,0 +1,19 @@
+.profile__info-work{
+    font-size: 18px;
+   max-width: 415px;
+   max-height: 22px;
+    }
+
+    @media screen and (max-width:1279px) {
+        .profile__info-work {
+            
+        }
+    }
+    @media screen and (max-width:767px){
+        .profile__info-work {
+       font-size: 14px;
+      text-align: center;
+      
+           
+        }
+    }

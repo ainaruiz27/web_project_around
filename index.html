@@ -11,38 +11,60 @@
 
 <body>
     <div class="page">
+    
         <section class="header">
+           <!--  <div class="popup">
+            <div class="popup__overlay">
+            <div class="popup__container">
+                <form>
+                          <h2>Edit Profile</h2>
+                          <label for="name">Jacques Costeau:</label>
+                          <input type="text" id="name" name="name" placeholder="Your name">
+              
+                          <label for="profession">Explorer:</label>
+                          <input type="text" id="profession" name="profession" placeholder="Your profession">
+              
+                          <button type="submit">Save</button>
+                      </form>
+                    </div>
+                </div>
+              <div> -->
+
             <header class="header__logo">
                 <img class="header__image " src="./images/Vector.png" alt="logo" />
             </header>
         </section>
         <section class="profile">
             <img class="profile__avatar " src="./images/Avatar.jpg" alt="Avatar" />
-            <div class="profile__info">
-                <h2 class="profile__info-name">
-                    Jacques Cousteau
-                </h2>
-                <button class="profile__info-editbutton"></button>
+            <div class="profile__info-div">
+                <div class="profile__info">
+                    <h2 class="profile__info-name">
+                        Jacques Cousteau
+                    </h2>
+                    <button class="profile__info-editbutton"></button>
+                </div>
+
+                <h3 class="profile__info-work">
+                    Explorer
+                </h3>
+            </div>
+            <button class="profile__addbutton"></button>
+        </section>
+        <section class="elements">
+            
+            <img src="./images/yosemite.jpg" alt="Yosemite Valley" class="elements__element">
            
-            <h3 class="profile__info-work">
-                Explorer
-            </h3>
-    </div>
-    <button class="profile__addbutton"></button>
-    </section>
-    <section class="elements">
-        <img src="./images/yosemite.jpg" alt="Yosemite Valley" class="elements__element">
-        <img src="./images/lakelouis.jpg" alt="Lake Louise" class="elements__element">
-        <img src="./images/bald.jpg" alt="Bald Mountains" class="elements__element">
-        <img src="./images/latemar.jpg" alt="Latemar" class="elements__element">
-        <img src="./images/vanoise.jpg" alt="Vanoise National Park" class="elements__element">
-        <img src="./images/lagobraies.jpg" alt="Lago di Braies" class="elements__element">
+            <img src="./images/lakelouis.jpg" alt="Lake Louise" class="elements__element">
+            <img src="./images/bald.jpg" alt="Bald Mountains" class="elements__element">
+            <img src="./images/latemar.jpg" alt="Latemar" class="elements__element">
+            <img src="./images/vanoise.jpg" alt="Vanoise National Park" class="elements__element">
+            <img src="./images/lagobraies.jpg" alt="Lago di Braies" class="elements__element">
 
-    </section>
-    <section class="footer">
-        <h5 class="footer__text">© 2020 Around The U.S.</h5>
+        </section>
+        <section class="footer">
+            <h5 class="footer__text">© 2020 Around The U.S.</h5>
 
-    </section>
+        </section>
     </div>
     <script src="script.js"></script>
 </body>
