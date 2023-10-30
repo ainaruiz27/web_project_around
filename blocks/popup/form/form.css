@@ -1,0 +1,12 @@
+
+.form {
+    position: relative;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 430px;
+    height: 330px;
+    z-index: 2;
+}

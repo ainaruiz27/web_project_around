@@ -3,11 +3,13 @@
     font-weight: 900;
     line-height: 29px;
     max-width: 220px;
-    text-align: center;
+    
     margin:0 auto;
     padding: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    position: relative; /* Añadido */
+  z-index: 1; /* Añadido */
     
     }
