@@ -12,3 +12,7 @@
         .profile__info-div{
     display: block;
 }
+
+
+  <div class="elements__image">
+                    <img src="./images/Trash.jpg" alt="Papelera" class="elements__trash"> 

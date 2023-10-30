@@ -1,5 +1,5 @@
 .profile__addbutton {
-    background: transparent url(../../../images/addbutton.svg) center no-repeat;
+    background: transparent url(../../../images/Vector\ \(2\).svg) center no-repeat;
     width: 150px;
     height: 50px;
     position: absolute;
@@ -10,16 +10,13 @@
     border: 2px solid white;
 }
 
-@media screen and (max-width:1279px) {
-    .profile__addbutton {}
-}
 
 @media screen and (max-width:767px) {
     .profile__addbutton {
-        width: 282px;
+     width: 282px;
         height: 50px;
-        width: 100%;
         position: static;
+
        
        
     }
