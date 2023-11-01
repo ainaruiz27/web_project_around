@@ -7,3 +7,9 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 }
+@media screen and (max-width:767px) {
+    .form__input {
+        max-width: 238px;
+        height: 27px;
+    }
+}

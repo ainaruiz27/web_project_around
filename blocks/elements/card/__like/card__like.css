@@ -8,6 +8,7 @@
     right: 10px;
     transition: background-color 0.3s;
     z-index: 2;
+    cursor: pointer;
 }
 
 .card__like:hover {

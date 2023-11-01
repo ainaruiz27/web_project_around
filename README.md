@@ -28,6 +28,7 @@ El proyecto consta de estas secciones:
 -Un archivo index.html: para escribir código que se utiliza, para estructurar y desplegar la página web y sus contenidos.
 -Un archivo index.css: hoja de estilos para editar y estilizar el documento.
 -Un archivo script.js: unidad de código fuente que se utiliza para agregar interactividad y funcionalidad a la páginas web.
+-Un archivo normalize.css: utilizado para normalizar el comportamiento de los estilos predeterminados de los navegadores web.
 -Archivo README: información útil sobre el desenvolupamento del proyecto.
 -Carpeta de blocks: donde hemos dividido por carpetas los diferentes estilos del documento.
 -Carpeta Fonts: donde encontramos las fuentes que hemos descargado para el proyecto.

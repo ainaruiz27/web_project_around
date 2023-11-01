@@ -10,11 +10,9 @@
     cursor:pointer;
     grid-area: button;
     margin-top: 15px;
-    
+    transition: ease 0.3;
 }
-.profile__info-editbutton{
-    opacity: 0.6;
-}
+
 
 @media screen and (max-width:767px) {
     .profile__info-editbutton {
@@ -23,7 +21,9 @@
        margin-top: 5px;
        margin-left: 5px;
      
-       
-       
     }
+}
+.profile__info-editbutton:hover{
+    opacity: 0.6;
+    cursor: pointer;
 }
