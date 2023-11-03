@@ -1,6 +1,9 @@
 .profile__info-work{
     font-size: 18px;
    max-width: 415px;
+   overflow: hidden; 
+   white-space: nowrap; 
+   text-overflow: ellipsis;
    max-height: 22px;
     }
 
