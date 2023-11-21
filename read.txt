@@ -1,0 +1,19 @@
+const imagePopupSelector = document.querySelector('#image-popup');
+const closeImagePopupIcon = document.querySelector('#close-image');
+
+
+closeImagePopupIcon.addEventListener('click', () => handleChangeVisibility(imagePopupSelector));
+
+function openImagePopup() {
+  handleChangeVisibility(imagePopupSelector);
+}
+
+
+    <div class="popup visible" id="image-popup">
+        <button class="popup__close-icon" id="close-image" type="button"></button>
+                <img class="image-popup__img"
+                    src="https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg"
+                    alt="Popup Image"> 
+                    <h3></h3> 
+
+        </div>
