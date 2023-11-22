@@ -46,7 +46,7 @@
 
 .popup__close-image{
     position: absolute;
-    background: transparent url(../web_project_around/images/cerraricono.svg) center no-repeat;
+    background: transparent url('/images/closeicon.svg') center no-repeat;
     background-size: contain; 
     width: 40px;
     height: 40px;
