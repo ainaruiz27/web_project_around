@@ -17,3 +17,47 @@ function openImagePopup() {
                     <h3></h3> 
 
         </div>
+
+
+         initialCards.forEach(card => {
+    createCard(card.name, card.link); 
+  });
+
+  function createCard(name,link){
+    const newCard = document.querySelector('.template').content.querySelector('.card').cloneNode(true);
+    newCard.querySelector('.card__text').textContent = name;
+    newCard.querySelector('.elements__element').src = link;
+    console.log(newCard);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const template = document.querySelector('.template');
+      const cardContainer = document.querySelector('.card-container');
+
+      const newCard = template.content.cloneNode(true);
+      cardContainer.appendChild(newCard);
+
+      const likeButton = newCard.querySelector('.card__like');
+
+      likeButton.addEventListener('click', function () {
+          likeButton.classList.toggle('.button_like-active'); 
+    
+    
+      });
+  });
+
+  
+    newCard.addEventListener('click', () => {
+      console.log('clik')
+      imagePopUp.show();
+    })
+
+    cardContainer.append(newCard);
+  }
+
+function handleAddFormSubmit(evt){   
+evt.preventDefault()
+  console.log(inputTitle.value) ;
+createCard(inputTitle.value, inputLink.value);
+}
+submitAddForm.addEventListener('click',handleAddFormSubmit) 
+
