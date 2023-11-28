@@ -1,4 +1,4 @@
-const profilepopupSelector = document.querySelector("#profile__popup");
+const profilePopupSelector = document.querySelector("#profile__popup");
 const addPopupSelector = document.querySelector("#add__popup");
 const popupCloseIcon = document.querySelector("#close-profile");
 const btnSave = document.querySelector(".profile__info-editbutton");
@@ -15,7 +15,8 @@ const inputLink = document.querySelector("#link");
 const submitAddForm = document.querySelector("#form__addbutton");
 const imagePopUp = document.querySelector("#image-popup");
 const closeImageBtn = document.querySelector("#close-image");
-const likeBtn = document.querySelector("#like-button");
+const likeBtn = document.querySelector("#card__like");
+const submitProfileForm = document.querySelector("#form__editbutton");
 
 closeImageBtn.addEventListener("click", () => {
   handleChangeVisibility(imagePopUp);
@@ -29,18 +30,24 @@ function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = inputName.value;
   profileJob.textContent = inputProfession.value;
+  handleChangeVisibility(profilePopupSelector);
+}
+
+function handleAddFormSubmit(evt) {
+  evt.preventDefault();
+  const newCard = getCardElement(inputTitle.value, inputLink.value);
+  cardContainer.prepend(newCard);
   handleChangeVisibility(addPopupSelector);
 }
 
-function handleProfileFormSubmit(evt) {
-  evt.preventDefault();
-  inputTitle.textContent = inputTitle.value;
-  inputLink.textContent = inputLink.value;
-}
-
-submitAddForm.addEventListener("submit", handleProfileFormSubmit);
-btnSave.addEventListener("click", handleChangeVisibility);
-popupCloseIcon.addEventListener("click", handleChangeVisibility);
+submitProfileForm.addEventListener("click", handleProfileFormSubmit);
+submitAddForm.addEventListener("click", handleAddFormSubmit);
+btnSave.addEventListener("click", () => {
+  handleChangeVisibility(profilePopupSelector);
+});
+popupCloseIcon.addEventListener("click", function () {
+  handleChangeVisibility(profilePopupSelector);
+});
 
 btnAddItem.addEventListener("click", function () {
   handleChangeVisibility(addPopupSelector);
@@ -79,8 +86,8 @@ const initialCards = [
 
 function handlePreviewPicture(link, name) {
   handleChangeVisibility(imagePopUp);
-  const image = document.querySelector(".image-popup__img");
-  const title = document.querySelector(".image-popup__title");
+  const image = document.querySelector(".popup__image");
+  const title = document.querySelector(".popup__image-title");
 
   console.log(link, name);
 
@@ -96,16 +103,18 @@ function getCardElement(name, link) {
     .content.querySelector(".card")
     .cloneNode(true);
   const likeButton = cardElement.querySelector(".card__like");
-  //const deleteButton = cardElement.querySelector(".card__delete-button");
+  const deleteButton = cardElement.querySelector(".card__trash-icon");
   const cardImage = cardElement.querySelector(".elements__element");
 
   cardImage.src = link;
   cardImage.alt = name;
 
   cardElement.querySelector(".card__text").textContent = name;
-
+  function handleDeleteCard() {
+    cardElement.remove();
+  }
   likeButton.addEventListener("click", handleLikeIcon);
-  // deleteButton.addEventListener("click", handleDeleteCard);
+  deleteButton.addEventListener("click", handleDeleteCard);
   cardImage.addEventListener("click", () => handlePreviewPicture(link, name));
   return cardElement;
 }
@@ -115,29 +124,7 @@ initialCards.forEach((card) => {
   cardContainer.append(newCard);
 });
 
-function createCard(name, link) {
-  const newCard = document
-    .querySelector(".template")
-    .content.querySelector(".card")
-    .cloneNode(true);
-  newCard.querySelector(".card__text").textContent = name;
-  newCard.querySelector(".elements__element").src = link;
-  console.log(newCard);
-}
-
 function handleLikeIcon(evt) {
   console.log(evt.target);
-  evt.target.classList.toggle("button_like-active");
+  evt.target.classList.toggle("card__like_active");
 }
-
-// newCard.addEventListener("click", () => {
-//   console.log("clik");
-//   imagePopUp.show();
-// });
-
-function handleAddFormSubmit(evt) {
-  evt.preventDefault();
-  console.log(inputTitle.value);
-  createCard(inputTitle.value, inputLink.value);
-}
-submitAddForm.addEventListener("click", handleAddFormSubmit);

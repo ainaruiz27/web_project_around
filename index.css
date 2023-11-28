@@ -8,6 +8,9 @@
 @import url(./blocks/popup/form/__title/form__title.css);
 @import url(./blocks/popup/form/__input/form__input.css);
 @import url(./blocks/popup/form/__button/form__button.css);
+@import url(./blocks/popup/__image/popup__image.css);
+@import url(./blocks/popup/__image-close/popup__image-close.css);
+@import url(./blocks/popup/__image-title/popup__image-title.css);
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
 @import url(./blocks/profile/profile.css);
@@ -27,55 +30,14 @@
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__text/footer__text.css);
 
-.image-popup__img{
-        position: relative;
-        width: 433px;
-        height: 540px;
-        z-index: 3;
-        margin: 0 auto;
-    }
-    
-    @media screen and (max-width:767px) {
-        .image-popup__img{
-            width: 282px;
-            height: 322px;
-        
-        }
-    }
 
 
-.popup__close-image{
-    position: absolute;
-    background: transparent url('/images/closeicon.svg') center no-repeat;
-    background-size: contain; 
-    width: 40px;
-    height: 40px;
-    border: none;
-    outline: none;
-    top: 20px; 
-    right: 420px; 
-    transition: all 0.3s ease;
-    cursor: pointer;
-   
-}
-
-.image-popup__title{
-position: absolute;
-font-size: 12px;
-font-weight: 400;
-color:#FFFFFF;
-line-height: 14.52px;
-top: 585px; 
-left: 460px;
-
-}
 
 
 .button_like-active{
 background-color: black;
       
 }
-
 
 
 
