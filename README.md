@@ -40,3 +40,22 @@ El proyecto consta de estas secciones:
 
 ### Planes para mejorar el proyecto
 Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web.
+
+#Proyecto 6
+### Actualizaciones recientes del código base
+
+Seguimos con el mismo proyecto: hemos añadido nuevas interacciones con la página web.
+
+1. Las seis tarjetas iniciales
+2. Formulario para añadir una tarjeta
+3. Agregar una tarjeta
+4. El botón de "Me gusta"
+5. Eliminar una tarjeta
+6. Abrir la ventana emergente de las imágenes
+7. Hacer que las ventanas emergentes se abran y cierren de forma fluida
+
+- Guardaremos los avances del trabajo en la aplicación **Git Bash** ..
+- Usamos la plataforma **GitHub** donde publicaremos el trabajo y mantendremos el proyecto actualizado para que otros usuarios y nosotros mismos podamos hacer uso de este repositorio.
+
+### Planes para mejorar el proyecto
+Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web...
