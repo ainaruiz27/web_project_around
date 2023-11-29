@@ -1,19 +1,24 @@
 
 .popup__image-title{
     position: absolute;
-    font-size: 12px;
+    max-width:291px;
+    max-height: 12px;
+    font-size: 16px;
     font-weight: 400;
     color:#FFFFFF;
     line-height: 14.52px;
     bottom: 45px;
     left: 540px;
+    bottom:-40px ;
+    left:0px ;
     
     }
 
     @media screen and (max-width:767px) {
         .popup__image-title{
-            bottom: 85px;
-            left: 40px;
+            font-size: 12px;
+            bottom: -25px;
+            left: 10px;
         
         }
     }
