@@ -1,22 +1,22 @@
-.profile__info-name{
+.profile__info-name {
     font-size: 42px;
     max-width: 373px;
-    overflow: hidden; 
-    white-space: nowrap; 
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
     max-height: 39px;
     margin: auto;
-    
+
+}
+
+@media screen and (max-width:1279px) {
+    .profile__info-name {}
+}
+
+@media screen and (max-width:767px) {
+    .profile__info-name {
+        font-size: 22px;
+        text-align: center;
+
     }
-    @media screen and (max-width:1279px) {
-        .profile__info-name {
-            
-        }
-    }
-    @media screen and (max-width:767px){
-        .profile__info-name {
-       font-size: 22px;
-            text-align: center;
-           
-        }
-    }
+}
