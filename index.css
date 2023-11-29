@@ -8,6 +8,7 @@
 @import url(./blocks/popup/form/__title/form__title.css);
 @import url(./blocks/popup/form/__input/form__input.css);
 @import url(./blocks/popup/form/__button/form__button.css);
+@import url(./blocks/popup/__image-container/popup__image-container.css);
 @import url(./blocks/popup/__image/popup__image.css);
 @import url(./blocks/popup/__image-close/popup__image-close.css);
 @import url(./blocks/popup/__image-title/popup__image-title.css);
@@ -29,16 +30,6 @@
 @import url(./blocks/elements/card/__like/card__like.css);
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__text/footer__text.css);
-
-
-
-
-
-.button_like-active{
-background-color: black;
-      
-}
-
 
 
 
