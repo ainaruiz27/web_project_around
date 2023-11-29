@@ -1,5 +1,5 @@
 .card__like {
-    background-image: url(../../../../images/like.svg) ;
+    background-image: url(../../../../images/like.svg);
     background-position: center;
     background-repeat: no-repeat;
     width: 20.76px;
@@ -14,16 +14,11 @@
 }
 
 .card__like_active {
-    background-image: url(../../../../images/likeactive.svg) ;
-   
+    background-image: url(../../../../images/likeactive.svg);
+
 }
 
-.button_like-active{
+.button_like-active {
     background-color: black;
-          
-    }
-    
-    
-    
-    
-    
+
+}
