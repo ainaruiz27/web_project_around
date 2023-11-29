@@ -54,8 +54,8 @@ Seguimos con el mismo proyecto: hemos añadido nuevas interacciones con la pági
 6. Abrir la ventana emergente de las imágenes
 7. Hacer que las ventanas emergentes se abran y cierren de forma fluida
 
-- Guardaremos los avances del trabajo en la aplicación **Git Bash** ..
+- Guardaremos los avances del trabajo en la aplicación **Git Bash**.
 - Usamos la plataforma **GitHub** donde publicaremos el trabajo y mantendremos el proyecto actualizado para que otros usuarios y nosotros mismos podamos hacer uso de este repositorio.
 
 ### Planes para mejorar el proyecto
-Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web...
+Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web.
