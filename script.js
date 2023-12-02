@@ -31,6 +31,8 @@ function handleProfileFormSubmit(evt) {
   profileName.textContent = inputName.value;
   profileJob.textContent = inputProfession.value;
   handleChangeVisibility(profilePopupSelector);
+  inputName.value = "";
+  inputProfession.value ="";
 }
 
 function handleAddFormSubmit(evt) {
@@ -38,6 +40,9 @@ function handleAddFormSubmit(evt) {
   const newCard = getCardElement(inputTitle.value, inputLink.value);
   cardContainer.prepend(newCard);
   handleChangeVisibility(addPopupSelector);
+  inputTitle.value ="";
+  inputLink.value ="";
+
 }
 
 submitProfileForm.addEventListener("click", handleProfileFormSubmit);
