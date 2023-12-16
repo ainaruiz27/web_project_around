@@ -1,63 +1,28 @@
-const imagePopupSelector = document.querySelector('#image-popup');
-const closeImagePopupIcon = document.querySelector('#close-image');
 
-
-closeImagePopupIcon.addEventListener('click', () => handleChangeVisibility(imagePopupSelector));
-
-function openImagePopup() {
-  handleChangeVisibility(imagePopupSelector);
-}
-
-
-    <div class="popup visible" id="image-popup">
-        <button class="popup__close-icon" id="close-image" type="button"></button>
-                <img class="image-popup__img"
-                    src="https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg"
-                    alt="Popup Image"> 
-                    <h3></h3> 
-
-        </div>
-
-
-         initialCards.forEach(card => {
-    createCard(card.name, card.link); 
-  });
-
-  function createCard(name,link){
-    const newCard = document.querySelector('.template').content.querySelector('.card').cloneNode(true);
-    newCard.querySelector('.card__text').textContent = name;
-    newCard.querySelector('.elements__element').src = link;
-    console.log(newCard);
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const template = document.querySelector('.template');
-      const cardContainer = document.querySelector('.card-container');
-
-      const newCard = template.content.cloneNode(true);
-      cardContainer.appendChild(newCard);
-
-      const likeButton = newCard.querySelector('.card__like');
-
-      likeButton.addEventListener('click', function () {
-          likeButton.classList.toggle('.button_like-active'); 
-    
-    
-      });
-  });
-
+      const fieldsetList = Array.from(formElement.querySelectorAll(".form__set"));
   
-    newCard.addEventListener('click', () => {
-      console.log('clik')
-      imagePopUp.show();
-    })
+      fieldsetList.forEach((fieldset) => {
 
-    cardContainer.append(newCard);
+
+
+
+            function esckey(evt) {
+  if (evt.keyCode === 27) {
+    document.getElementById("tutorial").innerHTML = 'La tecla Escape fue presionada';
+    // Aquí colocas la lógica directa para cerrar el popup
+    document.getElementById("popup").style.display = "none";
   }
-
-function handleAddFormSubmit(evt){   
-evt.preventDefault()
-  console.log(inputTitle.value) ;
-createCard(inputTitle.value, inputLink.value);
 }
-submitAddForm.addEventListener('click',handleAddFormSubmit) 
 
+// Agregar un listener para el evento de clic en el icono de cierre
+const popupCloseIcon = document.getElementById("popupCloseIcon");
+
+if (popupCloseIcon) {
+  popupCloseIcon.addEventListener("click", function () {
+    // Cerrar el popup cuando se hace clic en el icono de cierre
+    cerrarPopup();
+  });
+}
+
+// Agregar un listener para el evento de tecla presionada
+document.addEventListener("keydown", esckey);
