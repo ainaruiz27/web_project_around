@@ -4,9 +4,15 @@
     font-size: 14px;
     border: none;
     outline: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); 
+   
 }
+
+.form__input:invalid{
+    border: none;
+    border-bottom: 1px solid  red;
+}
+
 @media screen and (max-width:767px) {
     .form__input {
         max-width: 238px;

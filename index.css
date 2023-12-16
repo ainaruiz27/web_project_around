@@ -7,7 +7,10 @@
 @import url(./blocks/popup/form/form.css);
 @import url(./blocks/popup/form/__title/form__title.css);
 @import url(./blocks/popup/form/__input/form__input.css);
+@import url(./blocks/popup/form/__input/form__input_type_error.css);
+@import url(./blocks/popup/form/__input/form__input-error_active.css);
 @import url(./blocks/popup/form/__button/form__button.css);
+@import url(./blocks/popup/form/__button/button_inactive.css);
 @import url(./blocks/popup/__image-container/popup__image-container.css);
 @import url(./blocks/popup/__image-container/__image/popup__image.css);
 @import url(./blocks/popup/__image-container/__image/__image-close/popup__image-close.css);
@@ -34,3 +37,14 @@
 
 
 
+
+
+.error-message{
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+    width: 358px;
+    min-height: 20px;
+    padding: 5px 0;
+
+}

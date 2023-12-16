@@ -7,6 +7,13 @@
     transition: background-color 0.3s;
     margin-top: 20px;
 }
+
+.button_inactive:hover{
+    background: gainsboro;
+    border: 1px solid white;
+    }
+    
+    
 @media screen and (max-width:767px) {
     .form__button{
         max-width: 238px;
