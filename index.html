@@ -11,19 +11,19 @@
 
 <body>
     <div class="page">
-        <div class="popup" id="profile__popup">
+        <div class="popup overlay" id="profile__popup">
             <form action="" class="form" novalidate>
                 <button class="popup__close-icon" id="close-profile" type="button"></button>
                 <h2 class="form__title">Editar perfil</h2>
                 <input type="text" id="name" name="name" class="form__input form__input_type_error" value="Jacques Costeau" required minlength="5" maxlength="40">
                 <span class="name-error error-message"></span>
-                <input type="text" id="profession" name="profession" class="form__input form__input_type_error" value="Explorer" required minlength="5" maxlength="200">
+                <input type="text" id="profession" name="about" class="form__input form__input_type_error" value="Explorer" required minlength="5" maxlength="200">
                 <span class="profession-error error-message"></span>
                 <button class="form__button" id="form__editbutton" type="submit">Guardar</button>
             </form>
         </div>
 
-        <div class="popup " id="add__popup" novalidate>
+        <div class="popup overlay" id="add__popup" novalidate>
             <form action="" class="form">
                 <button class="popup__close-icon" id="close-add" type="button"></button>
                 <h2 class="form__title">Nuevo lugar</h2>
@@ -35,7 +35,7 @@
             </form>
         </div>
 
-        <div class="popup" id="image-popup">
+        <div class="popup overlay" id="image-popup">
             <div class="popup__image-container">
                 <img class="popup__image"
                     src="https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg"

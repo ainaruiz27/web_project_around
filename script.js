@@ -152,14 +152,13 @@ function esckey(evt) {
     handleRemoveVisibility(addPopupSelector);
     handleRemoveVisibility(profilePopupSelector);
     handleRemoveVisibility(imagePopUp);
-     console.log("cerrarpopup")
   }
 }
 function closeOnClick(evt) {
-  if(addPopupSelector.classList.contains('visible') || profilePopupSelector.classList.contains('visible') || imagePopUp.classList.contains('visible')){
-    handleRemoveVisibility(addPopupSelector);
-    handleRemoveVisibility(profilePopupSelector);
-    handleRemoveVisibility(imagePopUp);
+  if (evt.target.classList.contains('overlay')) {
+    addPopupSelector.classList.remove('visible');
+    profilePopupSelector.classList.remove('visible');
+    imagePopUp.classList.remove('visible');
   }
-
+ 
 }
