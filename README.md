@@ -59,3 +59,18 @@ Seguimos con el mismo proyecto: hemos añadido nuevas interacciones con la pági
 
 ### Planes para mejorar el proyecto
 Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web.
+
+#Proyecto 7
+
+Seguimos con el mismo proyecto: hemos añadido nuevas interacciones con la página web.
+
+1. Validar el formulario "Editar perfil"
+2. Validación del formulario "Nuevo lugar"
+3. Cerrar la ventana emergente haciendo clic en la superposición
+4. Cerrar la ventana emergente pulsando Esc
+
+- Guardaremos los avances del trabajo en la aplicación **Git Bash**.
+- Usamos la plataforma **GitHub** donde publicaremos el trabajo y mantendremos el proyecto actualizado para que otros usuarios y nosotros mismos podamos hacer uso de este repositorio.
+
+### Planes para mejorar el proyecto
+Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web.
