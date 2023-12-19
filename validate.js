@@ -22,7 +22,6 @@ const hideInputError = (formElement, inputElement, settings) => {
 };
 
 const checkInputValidity = (formElement, inputElement, settings) => {
-  console.log("Validez del input ->", inputElement.validity.valid);
   if (!inputElement.validity.valid) {
     showInputError(formElement, inputElement, inputElement.validationMessage,settings);
   } else {
@@ -37,7 +36,6 @@ const hasInvalidInput = (inputList) => {
 };
 
 const toggleButtonState = (inputList, buttonElement, settings) => {
-  console.log("Hay algun Input mal?", hasInvalidInput(inputList));
   if (hasInvalidInput(inputList)) {
     buttonElement.classList.add(settings.inactiveButtonClass);
     buttonElement.disable = true;
@@ -50,7 +48,7 @@ const toggleButtonState = (inputList, buttonElement, settings) => {
 const setEventListeners = (formElement, settings) => {
   const inputList = Array.from(formElement.querySelectorAll(settings.inputSelector));
   const buttonElement = formElement.querySelector(settings.submitButtonSelector);
-  console.log("inputList->", inputList);
+
 
   toggleButtonState(inputList, buttonElement, settings);
 
@@ -64,7 +62,6 @@ const setEventListeners = (formElement, settings) => {
 
 const enableValidation = (settings) => {
   const formList = Array.from(document.querySelectorAll(settings.formSelector));
-  console.log("formList ->", formList);
   formList.forEach((formElement) => {
     setEventListeners(formElement, settings);
     formElement.addEventListener("submit", function (evt) {

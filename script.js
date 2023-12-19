@@ -1,12 +1,13 @@
 const popUp = document.querySelector(".popup");
 const profilePopupSelector = document.querySelector("#profile__popup");
+const formProfile = document.querySelector(".form.form__editprofile");
 const addPopupSelector = document.querySelector("#add__popup");
 const popupCloseIcon = document.querySelector("#close-profile");
 const btnSave = document.querySelector(".profile__info-editbutton");
 const btnAddItem = document.querySelector(".profile__addbutton");
 const inputName = document.querySelector("#name");
 const inputProfession = document.querySelector("#profession");
-const formElement = document.querySelector(".form");
+const formUrl = document.querySelector(".form.form__editplace");
 const profileName = document.querySelector(".profile__info-name");
 const profileJob = document.querySelector(".profile__info-work");
 const cardContainer = document.querySelector(".elements");
@@ -25,40 +26,46 @@ closeImageBtn.addEventListener("click", () => {
 
 function handleShowVisibility(popupSelector) {
   popupSelector.classList.add("visible");
-  popupSelector.addEventListener("click",closeOnClick);
+  popupSelector.addEventListener("click", closeOnClick);
   
-document.addEventListener('keydown',esckey)
-
+  document.addEventListener('keydown', handleEscapeKeyPress);
 }
-
 
 function handleRemoveVisibility(popupSelector) {
   popupSelector.classList.remove("visible");
-  document.removeEventListener('keydown',esckey)
+  document.removeEventListener('keydown', handleEscapeKeyPress);
 }
-
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
-  profileName.textContent = inputName.value;
-  profileJob.textContent = inputProfession.value;
-  handleRemoveVisibility(profilePopupSelector);
-  inputName.value = "";
-  inputProfession.value ="";
+
+
+  if (inputName.validity.valid && inputProfession.validity.valid) {
+    profileName.textContent = inputName.value;
+    profileJob.textContent = inputProfession.value;
+    handleRemoveVisibility(profilePopupSelector);
+    inputName.value = "";
+    inputProfession.value = "";
+  }
 }
 
 function handleAddFormSubmit(evt) {
   evt.preventDefault();
-  const newCard = getCardElement(inputTitle.value, inputLink.value);
-  cardContainer.prepend(newCard);
-  handleRemoveVisibility(addPopupSelector);
-  inputTitle.value ="";
-  inputLink.value ="";
 
+ 
+  if (inputTitle.validity.valid && inputLink.validity.valid) {
+    const newCard = getCardElement(inputTitle.value, inputLink.value);
+    cardContainer.prepend(newCard);
+    handleRemoveVisibility(addPopupSelector);
+    inputTitle.value = "";
+    inputLink.value = "";
+  }
 }
 
-submitProfileForm.addEventListener("click", handleProfileFormSubmit);
-submitAddForm.addEventListener("click", handleAddFormSubmit);
+
+formProfile.addEventListener("submit", handleProfileFormSubmit);
+formUrl.addEventListener("submit", handleAddFormSubmit);
+
 btnSave.addEventListener("click", () => {
   handleShowVisibility(profilePopupSelector);
 });
@@ -146,19 +153,18 @@ function handleLikeIcon(evt) {
   evt.target.classList.toggle("card__like_active");
 }
 
-
-function esckey(evt) {
-  if  (evt.keyCode == 27) {
+function handleEscapeKeyPress(evt) {
+  if (evt.key === "Escape") {
     handleRemoveVisibility(addPopupSelector);
     handleRemoveVisibility(profilePopupSelector);
     handleRemoveVisibility(imagePopUp);
   }
 }
+
 function closeOnClick(evt) {
   if (evt.target.classList.contains('overlay')) {
     addPopupSelector.classList.remove('visible');
     profilePopupSelector.classList.remove('visible');
     imagePopUp.classList.remove('visible');
   }
- 
 }
