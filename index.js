@@ -1,3 +1,22 @@
+/*import Card from './card.js';
+import FormValidator from './formvalidator.js';
+
+const cardsArea = document.querySelector('.cards');
+
+const data = [
+  {
+    link: '',
+    title:'',
+  }
+]
+
+data.forEach(item =>{
+  const card = new Card (item, link, item.title, 'template-card');
+  cardsArea.append(card._getTemplate());
+})
+
+*/
+
 const popUp = document.querySelector(".popup");
 const profilePopupSelector = document.querySelector("#profile__popup");
 const formProfile = document.querySelector(".form.form_profile");
@@ -121,7 +140,7 @@ function handlePreviewPicture(link, name) {
   title.textContent = name;
 }
 
-function getCardElement(name, link) {
+/*function getCardElement(name, link) {
   const cardElement = document
     .querySelector(".template")
     .content.querySelector(".card")
@@ -136,13 +155,13 @@ function getCardElement(name, link) {
   cardElement.querySelector(".card__text").textContent = name;
   function handleDeleteCard() {
     cardElement.remove();
-  }
+  
   likeButton.addEventListener("click", handleLikeIcon);
   deleteButton.addEventListener("click", handleDeleteCard);
   cardImage.addEventListener("click", () => handlePreviewPicture(link, name));
   return cardElement;
 }
-
+*
 initialCards.forEach((card) => {
   const newCard = getCardElement(card.name, card.link);
   cardContainer.append(newCard);

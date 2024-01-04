@@ -1,0 +1,41 @@
+// para cualquier formulario 
+// deshabilidar el boton de submit
+// indicar con un mensaje y con estilos si la entrada es correcta
+
+const settings = {
+    formSelector: ".form",
+    inputSelector: ".form__input",
+    submitButtonSelector: ".form__button",
+    inactiveButtonClass: "button_inactive",
+    inputErrorClass: ".form__input_type_error",
+    errorClass: "form__input-error_active",
+};
+
+function activarValidador(form){
+    // obtener todos los inputs del formulario
+    const inputList = Array.from(document.querySelectorAll(settings.inputSelector));
+    const buttonSubmit = form.querySelector(settings.submitButtonSelector)
+    inputList.forEach(function(formElement){
+        formElement.addEventListener('input', (event) => {
+            const errorContent = form.querySelector(`.${event.target.name}-error`)
+            if(event.target.validity.valid){
+                errorContent.textContent = '';
+                event.target.classList.remove(settings.errorClass)
+            }else{
+                event.target.classList.add(settings.errorClass)
+                errorContent.textContent = event.target.validationMessage;
+            }
+            buttonSubmit.disabled = !inputList.every((item) => {´
+                return item.validity.valid;
+            });
+        })
+    });
+    buttonSubmit.disabled = !inputList.every((item) => {´
+        return item.validity.valid;
+    });
+}
+
+const forms= document.querySelectorAll(settings.formSelector)
+forms.forEach((item) => {
+    activarValidador(item)
+})
