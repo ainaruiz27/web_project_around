@@ -39,3 +39,61 @@ const forms= document.querySelectorAll(settings.formSelector)
 forms.forEach((item) => {
     activarValidador(item)
 })
+
+
+TARGETA CARD/*
+  _getTemplate() {
+    const cardElement = document
+      .querySelector(this._templateSelector)
+      .content.querySelector('.card')
+      .cloneNode(true);
+
+    return cardElement;
+  }
+
+  _setEventListeners() {
+    this._likeButton.addEventListener('click', this._likeHandler);
+    this._deleteButton.addEventListener('click', this._deleteHandler);
+    this._cardImage.addEventListener('click', this._previewHandler);
+  }
+
+  _handleLikeIcon(evt) {
+    evt.target.classList.toggle('card__like_active');
+  }
+
+  _handleDeleteCard() {
+    this._element.remove();
+  }
+
+  _handlePreviewPicture() {
+    // Lógica para mostrar una vista previa de la imagen
+    // Puedes utilizar la función handlePreviewPicture que ya tienes implementada
+    handlePreviewPicture(this._link, this._name);
+  }
+
+  generateCard() {
+    this._cardImage.src = this._link;
+    this._cardImage.alt = this._name;
+    this._element.querySelector('.card__text').textContent = this._name;
+
+    return this._element;
+  }
+
+
+// Ejemplo de uso:
+const initialCards = [
+  {
+    name: 'Valle de Yosemite',
+    link: 'https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg',
+  },
+  // ... Otras tarjetas ...
+];
+
+const cardContainer = document.querySelector('.elements');
+const cardTemplateSelector = '.template';
+
+initialCards.forEach((cardData) => {
+  const card = new Card(cardData, cardTemplateSelector);
+  const cardElement = card.generateCard();
+  cardContainer.append(cardElement);
+});

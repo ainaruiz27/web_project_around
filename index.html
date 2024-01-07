@@ -14,9 +14,11 @@
             <form action="" class="form form_profile" novalidate>
                 <button class="popup__close-icon" id="close-profile" type="button"></button>
                 <h2 class="form__title">Editar perfil</h2>
-                <input type="text" id="name" name="name" class="form__input form__input_type_error" value="Jacques Costeau" required minlength="5" maxlength="40">
+                <input type="text" id="name" name="name" class="form__input"
+                    value="Jacques Costeau" required minlength="5" maxlength="40">
                 <span class="name-error error-message"></span>
-                <input type="text" id="profession" name="about" class="form__input form__input_type_error" value="Explorer" required minlength="5" maxlength="200">
+                <input type="text" id="profession" name="about" class="form__input"
+                    value="Explorer" required minlength="5" maxlength="200">
                 <span class="profession-error error-message"></span>
                 <button class="form__button" id="form__editbutton" type="submit">Guardar</button>
             </form>
@@ -26,9 +28,11 @@
             <form action="" class="form form_place">
                 <button class="popup__close-icon" id="close-add" type="button"></button>
                 <h2 class="form__title">Nuevo lugar</h2>
-                <input type="text" id="title" name="title" class="form__input form__input_type_error" placeholder="Título" required  minlength="5" maxlength="40">
+                <input type="text" id="title" name="title" class="form__input "
+                    placeholder="Título" required minlength="5" maxlength="40">
                 <span class="title-error error-message"></span>
-                <input type="url" id="link" name="link" class="form__input form__input_type_error" placeholder="Enlace de la imagen" required >
+                <input type="url" id="link" name="link" class="form__input "
+                    placeholder="Enlace de la imagen" required>
                 <span class="link-error error-message"></span>
                 <button class="form__button" id="form__addbutton" type="submit">Crear</button>
             </form>
@@ -73,12 +77,12 @@
             <h5 class="footer__text">© 2020 Around The U.S.</h5>
 
         </footer>
-        <template class="template">
+        <template class="template-card">
             <div class="card">
                 <div class="card__trash-icon"></div>
-                <div class="elements__image">
-                <img class="elements__element"> 
-            </div>
+                <div class="card__image-container">
+                    <img class="card__image">
+                </div>
                 <div class="card__description">
                     <h3 class="card__text"></h3>
                     <button class="card__like" id="like-button"></button>
@@ -86,9 +90,8 @@
             </div>
         </template>
     </div>
-<script type="module" src="index.js"></script>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="index.js"></script>
     <script type="module" src="validate.js"></script>
-</body>
 
+</body>
 </html>
