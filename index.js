@@ -1,21 +1,14 @@
-/*import Card from './card.js';
-import FormValidator from './formvalidator.js';
+import Card from "./card.js";
+import FormValidator from "./formvalidator.js";
+import {
+  closeOnClick,
+  handleEscapeKeyPress,
+  handleRemoveVisibility,
+  handleShowVisibility,
+} from "./utils.js";
+import { initialCards, imagePopUp, formConfig } from "./constants.js";
 
-const cardsArea = document.querySelector('.cards');
-
-const data = [
-  {
-    link: '',
-    title:'',
-  }
-]
-
-data.forEach(item =>{
-  const card = new Card (item, link, item.title, 'template-card');
-  cardsArea.append(card._getTemplate());
-})
-
-*/
+const cardsArea = document.querySelector(".elements");
 
 const popUp = document.querySelector(".popup");
 const profilePopupSelector = document.querySelector("#profile__popup");
@@ -34,30 +27,23 @@ const addPopupCloseIcon = document.querySelector("#close-add");
 const inputTitle = document.querySelector("#title");
 const inputLink = document.querySelector("#link");
 const submitAddForm = document.querySelector("#form__addbutton");
-const imagePopUp = document.querySelector("#image-popup");
+
 const closeImageBtn = document.querySelector("#close-image");
 const likeBtn = document.querySelector("#card__like");
 const submitProfileForm = document.querySelector("#form__editbutton");
+
+initialCards.forEach((item) => {
+  const card = new Card(item.link, item.name, ".template-card");
+
+  cardsArea.append(card.generateCard());
+});
 
 closeImageBtn.addEventListener("click", () => {
   handleRemoveVisibility(imagePopUp);
 });
 
-function handleShowVisibility(popupSelector) {
-  popupSelector.classList.add("visible");
-  popupSelector.addEventListener("click", closeOnClick);
-  
-  document.addEventListener('keydown', handleEscapeKeyPress);
-}
-
-function handleRemoveVisibility(popupSelector) {
-  popupSelector.classList.remove("visible");
-  document.removeEventListener('keydown', handleEscapeKeyPress);
-}
-
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
-
 
   if (inputName.validity.valid && inputProfession.validity.valid) {
     profileName.textContent = inputName.value;
@@ -71,7 +57,6 @@ function handleProfileFormSubmit(evt) {
 function handleAddFormSubmit(evt) {
   evt.preventDefault();
 
- 
   if (inputTitle.validity.valid && inputLink.validity.valid) {
     const newCard = getCardElement(inputTitle.value, inputLink.value);
     cardContainer.prepend(newCard);
@@ -80,7 +65,6 @@ function handleAddFormSubmit(evt) {
     inputLink.value = "";
   }
 }
-
 
 formProfile.addEventListener("submit", handleProfileFormSubmit);
 formUrl.addEventListener("submit", handleAddFormSubmit);
@@ -100,90 +84,8 @@ addPopupCloseIcon.addEventListener("click", function () {
   addPopupSelector.classList.remove("visible");
 });
 
-const initialCards = [
-  {
-    name: "Valle de Yosemite",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg",
-  },
-  {
-    name: "Lago Louise",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg",
-  },
-  {
-    name: "Montañas Calvas",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg",
-  },
-  {
-    name: "Latemar",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/latemar.jpg",
-  },
-  {
-    name: "Parque Nacional de la Vanoise",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg",
-  },
-  {
-    name: "Lago di Braies",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
-  },
-];
+const formValidatorProfile = new FormValidator(formConfig, formProfile);
+formValidatorProfile.enableValidation();
 
-function handlePreviewPicture(link, name) {
-  handleShowVisibility(imagePopUp);
-  const image = document.querySelector(".popup__image");
-  const title = document.querySelector(".popup__image-title");
-
-  console.log(link, name);
-
-  image.src = link;
-  image.alt = name;
-
-  title.textContent = name;
-}
-
-/*function getCardElement(name, link) {
-  const cardElement = document
-    .querySelector(".template")
-    .content.querySelector(".card")
-    .cloneNode(true);
-  const likeButton = cardElement.querySelector(".card__like");
-  const deleteButton = cardElement.querySelector(".card__trash-icon");
-  const cardImage = cardElement.querySelector(".elements__element");
-
-  cardImage.src = link;
-  cardImage.alt = name;
-
-  cardElement.querySelector(".card__text").textContent = name;
-  function handleDeleteCard() {
-    cardElement.remove();
-  
-  likeButton.addEventListener("click", handleLikeIcon);
-  deleteButton.addEventListener("click", handleDeleteCard);
-  cardImage.addEventListener("click", () => handlePreviewPicture(link, name));
-  return cardElement;
-}
-*
-initialCards.forEach((card) => {
-  const newCard = getCardElement(card.name, card.link);
-  cardContainer.append(newCard);
-});
-
-function handleLikeIcon(evt) {
-  console.log(evt.target);
-  evt.target.classList.toggle("card__like_active");
-}
-
-function handleEscapeKeyPress(evt) {
-  if (evt.key === "Escape") {
-    handleRemoveVisibility(addPopupSelector);
-    handleRemoveVisibility(profilePopupSelector);
-    handleRemoveVisibility(imagePopUp);
-  }
-}
-
-function closeOnClick(evt) {
-  if (evt.target.classList.contains('overlay')) {
-    addPopupSelector.classList.remove('visible');
-    profilePopupSelector.classList.remove('visible');
-    imagePopUp.classList.remove('visible');
-  }
-}
+const formValidatorAddCard = new FormValidator(formConfig, formUrl);
+formValidatorAddCard.enableValidation();

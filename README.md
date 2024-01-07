@@ -74,3 +74,14 @@ Seguimos con el mismo proyecto: hemos añadido nuevas interacciones con la pági
 
 ### Planes para mejorar el proyecto
 Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web.
+
+#Proyecto 8
+
+Seguimos con el mismo proyecto: Nos centramos en la refactorización y ha reescribir porciones particulares del código.
+
+
+- Guardaremos los avances del trabajo en la aplicación **Git Bash**.
+- Usamos la plataforma **GitHub** donde publicaremos el trabajo y mantendremos el proyecto actualizado para que otros usuarios y nosotros mismos podamos hacer uso de este repositorio.
+
+### Planes para mejorar el proyecto
+Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web.
