@@ -1,11 +1,11 @@
 const settings = {
-    formSelector: ".form",
-    inputSelector: ".form__input",
-    submitButtonSelector: ".form__button",
-    inactiveButtonClass: "button_inactive",
-    inputErrorClass: ".form__input_type_error",
-    errorClass: "form__input-error_active",
-  };
+  formSelector: ".form",
+  inputSelector: ".form__input",
+  submitButtonSelector: ".form__button",
+  inactiveButtonClass: "button_inactive",
+  inputErrorClass: ".form__input_type_error",
+  errorClass: "form__input-error_active",
+};
 
 const showInputError = (formElement, inputElement, errorMessage, settings) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
@@ -23,7 +23,7 @@ const hideInputError = (formElement, inputElement, settings) => {
 
 const checkInputValidity = (formElement, inputElement, settings) => {
   if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, inputElement.validationMessage,settings);
+    showInputError(formElement, inputElement, inputElement.validationMessage, settings);
   } else {
     hideInputError(formElement, inputElement, settings);
   }
@@ -71,6 +71,3 @@ const enableValidation = (settings) => {
 };
 
 enableValidation(settings);
-
-
-

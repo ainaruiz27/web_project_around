@@ -1,0 +1,140 @@
+.elements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin: 0 auto 0 auto;
+    margin-bottom: 100px;
+    place-items: center;
+    max-width: 880px;
+    padding-top: 30px;
+    width: 100%;
+
+}
+
+@media screen and (max-width:1279px) {
+    .elements {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        margin: 0 auto 0 auto;
+        max-height: 1300px;
+
+    }
+}
+
+@media screen and (max-width:767px) {
+    .elements {
+        max-width: 282px;
+        max-height: 2268px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        width: 95%;
+        margin: 0 auto;
+
+    }
+}
+
+.card {
+    margin: 0;
+    width: 282px;
+    max-height: 100%;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.card__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 25px;
+    border-radius: 10px;
+
+}
+
+.card__image {
+    max-width: 282px;
+    overflow: hidden;
+    width: 100%;
+    height: 282px;
+    margin: 0;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+
+}
+
+.card__image-container {
+    max-width: 282px;
+    overflow: hidden;
+    width: 100%;
+    height: 282px;
+    margin: 0;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: black;
+}
+
+.card__like {
+    background-image: url(../../../../images/like.svg);
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20.76px;
+    height: 18.13px;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 10px;
+    transition: background-color 0.3s;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.card__like_active {
+    background-image: url(../../../../images/likeactive.svg);
+
+}
+
+.button_like-active {
+    background-color: black;
+
+}
+
+.card__text {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 29px;
+    max-width: 220px;
+
+    margin: 0 auto;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+}
+
+.card__trash-icon {
+    position: absolute;
+    z-index: 0.5;
+    height: 20px;
+    width: 20px;
+    background-image: url(../../../../images/Group.svg);
+    right: 23px;
+    top: 23px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+.card__trash-icon:hover {
+
+    opacity: 0.7;
+}

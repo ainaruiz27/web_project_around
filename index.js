@@ -1,15 +1,14 @@
-import Card from "./card.js";
-import FormValidator from "./formvalidator.js";
+import Card from "./Card.js";
+import FormValidator from "./FormValidator.js";
 import {
   closeOnClick,
   handleEscapeKeyPress,
   handleRemoveVisibility,
   handleShowVisibility,
 } from "./utils.js";
-import { initialCards, imagePopUp, formConfig } from "./constants.js";
+import { initialCards, imagePopUp, formConfig } from "./Constants.js";
 
 const cardsArea = document.querySelector(".elements");
-
 const popUp = document.querySelector(".popup");
 const profilePopupSelector = document.querySelector("#profile__popup");
 const formProfile = document.querySelector(".form.form_profile");
@@ -27,7 +26,6 @@ const addPopupCloseIcon = document.querySelector("#close-add");
 const inputTitle = document.querySelector("#title");
 const inputLink = document.querySelector("#link");
 const submitAddForm = document.querySelector("#form__addbutton");
-
 const closeImageBtn = document.querySelector("#close-image");
 const likeBtn = document.querySelector("#card__like");
 const submitProfileForm = document.querySelector("#form__editbutton");
@@ -58,8 +56,11 @@ function handleAddFormSubmit(evt) {
   evt.preventDefault();
 
   if (inputTitle.validity.valid && inputLink.validity.valid) {
+    /*
     const newCard = getCardElement(inputTitle.value, inputLink.value);
-    cardContainer.prepend(newCard);
+    */
+    const newCard = new Card( inputLink.value, inputTitle.value,  ".template-card");
+    cardContainer.prepend(newCard.generateCard());
     handleRemoveVisibility(addPopupSelector);
     inputTitle.value = "";
     inputLink.value = "";
