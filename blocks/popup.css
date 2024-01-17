@@ -235,29 +235,3 @@
 
     }
 }
-
-.popup__close-icon {
-    position: absolute;
-    top: -50px;
-    right: -10px;
-    background: transparent url(../../../images/closeicon.svg) center no-repeat;
-    border: none;
-    outline: none;
-    width: 40px;
-    height: 40px;
-    transition: all 0.3s ease;
-
-}
-
-@media screen and (max-width:767px) {
-    .popup__close-icon {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-.popup__close-icon:hover {
-    opacity: 0.6;
-    cursor: pointer;
-
-}
