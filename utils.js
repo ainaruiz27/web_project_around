@@ -1,4 +1,4 @@
-import { imagePopUp } from "./constants.js";
+import { imagePopUp } from "./Constants.js";
 
 export function handleShowVisibility(popupSelector) {
   popupSelector.classList.add("visible");
@@ -32,7 +32,6 @@ export function handlePreviewPicture(link, name) {
   const image = document.querySelector(".popup__image");
   const title = document.querySelector(".popup__image-title");
 
-  console.log(link, name);
 
   image.src = link;
   image.alt = name;
@@ -40,9 +39,8 @@ export function handlePreviewPicture(link, name) {
   title.textContent = name;
 }
 
-export function handleLikeIcon(evt) {
-  console.log(evt.target);
-  evt.target.classList.toggle("card__like_active");
+export function handleLikeIcon(cardElement) {
+  cardElement.querySelector('.card__like').classList.toggle('card__like_active');
 }
 
 export function handleDeleteCard(cardElement) {
