@@ -34,7 +34,7 @@ export function handlePreviewPicture(link, name) {
 
 
   image.src = link;
-  image.alt = name;
+  image.alt = "Imagen ampliada de " + name;
 
   title.textContent = name;
 }

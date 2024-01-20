@@ -1,4 +1,4 @@
-import { handlePreviewPicture, handleLikeIcon, handleDeleteCard } from "./utils.js";
+import { handlePreviewPicture, handleLikeIcon, handleDeleteCard } from "./Utils.js";
 export default class Card {
   constructor(link, title, selector) {
     this._link = link;
