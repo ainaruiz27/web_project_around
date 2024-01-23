@@ -46,7 +46,7 @@
 }
 
 .card__like {
-    background-image: url(../../../../images/like.svg);
+    background-image: url('../images/like.svg');
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,7 +65,7 @@
     cursor: pointer;
 }
 .card__like_active {
-    background-image: url(../../../../images/likeactive.svg);
+background-image: url('../images/likeactive.svg');
 
 }
 
@@ -94,7 +94,7 @@
     z-index: 0.5;
     height: 20px;
     width: 20px;
-    background-image: url(../../../../images/Group.svg);
+    background-image: url('../images/Group.svg');
     background-repeat: no-repeat;
     right: 23px;
     top: 23px;

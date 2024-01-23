@@ -68,7 +68,7 @@
 }
 
 .profile__info-editbutton {
-    background: transparent url(../../../../images/editbutton.png)center no-repeat;
+    background: transparent url(../images/editbutton.png)center no-repeat;
     border: none;
     width: 24px;
     height: 24px;
@@ -119,7 +119,7 @@
 }
 
 .profile__addbutton {
-    background: transparent url(../../../images/Vector\ \(2\).svg) center no-repeat;
+    background: transparent url(../images/Vector\ \(2\).svg) center no-repeat;
     width: 150px;
     height: 50px;
     position: absolute;
