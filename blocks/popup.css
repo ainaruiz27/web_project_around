@@ -40,7 +40,7 @@
     position: absolute;
     top: -50px;
     right: -10px;
-    background: transparent url(../../../images/closeicon.svg) center no-repeat;
+    background: transparent url(../images/closeicon.svg) center no-repeat;
     border: none;
     outline: none;
     width: 40px;
@@ -188,7 +188,7 @@
     position: absolute;
     top: -50px;
     right: -10px;
-    background: transparent url(../../../../../images/closeicon.svg) center no-repeat;
+    background: transparent url(../images/closeicon.svg) center no-repeat;
     border: none;
     outline: none;
     width: 40px;
