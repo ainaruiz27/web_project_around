@@ -72,11 +72,7 @@ btnSave.addEventListener("click", () => {
   inputName.value = profileName.textContent;
   inputProfession.value = profileJob.textContent;
 });
-btnSave.addEventListener("click", () => {
-  handleShowVisibility(profilePopupSelector);
-  inputName.value = profileName.textContent;
-  inputProfession.value = profileJob.textContent;
-});
+
 popupCloseIcon.addEventListener("click", function () {
   handleRemoveVisibility(profilePopupSelector);
 });
