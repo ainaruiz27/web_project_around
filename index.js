@@ -5,7 +5,7 @@ import {
   handleEscapeKeyPress,
   handleRemoveVisibility,
   handleShowVisibility,
-} from "./utils.js";
+} from "./Utils.js";
 import { initialCards, imagePopUp, formConfig } from "./Constants.js";
 
 const cardsArea = document.querySelector(".elements");
@@ -56,9 +56,6 @@ function handleAddFormSubmit(evt) {
   evt.preventDefault();
 
   if (inputTitle.validity.valid && inputLink.validity.valid) {
-    /*
-    const newCard = getCardElement(inputTitle.value, inputLink.value);
-    */
     const newCard = new Card( inputLink.value, inputTitle.value,  ".template-card");
     cardContainer.prepend(newCard.generateCard());
     handleRemoveVisibility(addPopupSelector);
@@ -72,7 +69,10 @@ formUrl.addEventListener("submit", handleAddFormSubmit);
 
 btnSave.addEventListener("click", () => {
   handleShowVisibility(profilePopupSelector);
+  inputName.value = profileName.textContent.trim();
+  inputProfession.value = profileJob.textContent.trim();
 });
+
 popupCloseIcon.addEventListener("click", function () {
   handleRemoveVisibility(profilePopupSelector);
 });

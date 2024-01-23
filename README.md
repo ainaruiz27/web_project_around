@@ -83,5 +83,6 @@ Seguimos con el mismo proyecto: Nos centramos en la refactorización y ha reescr
 - Guardaremos los avances del trabajo en la aplicación **Git Bash**.
 - Usamos la plataforma **GitHub** donde publicaremos el trabajo y mantendremos el proyecto actualizado para que otros usuarios y nosotros mismos podamos hacer uso de este repositorio.
 LINK PROYECTO: https://github.com/ainaruiz27/web_project_around.git
+LINK Pagina: https://ainaruiz27.github.io/web_project_around
 ### Planes para mejorar el proyecto
 Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web.

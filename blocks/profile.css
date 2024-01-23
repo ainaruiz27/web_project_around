@@ -69,6 +69,7 @@
 
 .profile__info-editbutton {
     background: transparent url(../../../../images/editbutton.png)center no-repeat;
+    border: none;
     width: 24px;
     height: 24px;
     align-self: center;
