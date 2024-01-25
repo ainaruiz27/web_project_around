@@ -6,7 +6,7 @@ import {
   handleRemoveVisibility,
   handleShowVisibility,
 } from "./Utils.js";
-import { initialCards, imagePopUp, formConfig } from "./Constants.js";
+import { initialCards, imagePopUp, formConfig } from "./constants.js";
 
 const cardsArea = document.querySelector(".elements");
 const popUp = document.querySelector(".popup");
