@@ -5,7 +5,7 @@ import {
   handleEscapeKeyPress,
   handleRemoveVisibility,
   handleShowVisibility,
-} from "./Utils.js";
+} from "./utils.js"
 import { initialCards, imagePopUp, formConfig } from "./constants.js";
 
 const cardsArea = document.querySelector(".elements");

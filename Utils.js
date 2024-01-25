@@ -1,4 +1,4 @@
-import { imagePopUp } from "./Constants.js";
+import { imagePopUp } from "./constants.js";
 
 export function handleShowVisibility(popupSelector) {
   popupSelector.classList.add("visible");
