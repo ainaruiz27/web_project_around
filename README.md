@@ -86,3 +86,15 @@ LINK PROYECTO: https://github.com/ainaruiz27/web_project_around.git
 LINK Pagina: https://ainaruiz27.github.io/web_project_around
 ### Planes para mejorar el proyecto
 Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web.
+
+#Proyecto 9
+
+Creación de clases y refactorización. Configurar el empaquetado (bundling) y creación (building) de Webpack.
+
+
+- Guardaremos los avances del trabajo en la aplicación **Git Bash**.
+- Usamos la plataforma **GitHub** donde publicaremos el trabajo y mantendremos el proyecto actualizado para que otros usuarios y nosotros mismos podamos hacer uso de este repositorio.
+LINK PROYECTO: https://github.com/ainaruiz27/web_project_around.git
+LINK Pagina: https://ainaruiz27.github.io/web_project_around
+### Planes para mejorar el proyecto
+Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web.
