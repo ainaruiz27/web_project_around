@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+   
     <title>Alrededor de los EE.UU.</title>
 </head>
 
@@ -43,18 +43,18 @@
                 <img class="popup__image"
                     src="https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg"
                     alt="Popup Image">
-                <button class="popup__image-close" id="close-image" type="button"></button>
+                <button class="popup__close-icon " id="close-image" type="button"></button>
                 <h3 class="popup__image-title">Valle de Yosemite</h3>
             </div>
         </div>
 
         <div class="header">
             <header class="header__logo">
-                <img class="header__image " src="./images/Vector.png" alt="logo">
+                <img class="header__image " src="<%=require('./images/Vector.png') %>" alt="logo">
             </header>
         </div>
         <section class="profile">
-            <img class="profile__avatar " src="./images/Avatar.jpg" alt="Avatar">
+            <img class="profile__avatar " src="<%=require('./images/Avatar.jpg') %>" alt="Avatar">
             <div class="profile__info-div">
                 <div class="profile__info">
                     <h2 class="profile__info-name">
@@ -90,7 +90,7 @@
             </div>
         </template>
     </div>
-    <script type="module" src="index.js"></script>
+    
    
 
 
