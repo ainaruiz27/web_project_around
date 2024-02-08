@@ -45,11 +45,14 @@ function handleProfileFormSubmit({name, about}) {
     userInfo.setUserInfo({name, job:about});
 }
 
-function handleAddFormSubmit({title, link}) {
-    const newCard = new Card( link, title,  ".template-card");
-    cardsSection.addItem(newCard.generateCard(), false);
+function handleAddFormSubmit({ title, link }) {
+  const newCard = new Card(link, title, ".template-card", {
+      handleCardClick: () => {
+          popupObjImage.open({ src: link, alt: title });
+      }
+  });
+  cardsSection.addItem(newCard.generateCard(), false);
 }
-
 
 
 btnSave.addEventListener("click", () => {
