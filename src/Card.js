@@ -1,12 +1,17 @@
-import {handleLikeIcon, handleDeleteCard } from "./utils.js";
+import { handleLikeIcon, handleDeleteCard } from "./utils/utils.js";
 export default class Card {
-  constructor(link, title, selector, {
-    handleCardClick
-  }) {
+  constructor
+    (link,title,selector, handleCardClick, handleLike,
+       handleRemoveLike, handleDeleteCard, {
+      handleCardClick
+      }) {
     this._link = link;
     this._title = title;
     this._selector = selector;
     this._handleCardClick = handleCardClick;
+    this._handleLike = handleLike;
+    this._handleRemoveLike = handleRemoveLike;
+    this._handleDeleteCard = handleDeleteCard;
   }
 
   _getTemplate() {
