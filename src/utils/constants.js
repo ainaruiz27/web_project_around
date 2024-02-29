@@ -44,3 +44,5 @@ export const formConfig = {
   disabledClass: "your-submit-button-disabled-class",
   },
 };
+
+export const avatarNode = document.querySelector('.profile__avatar');
