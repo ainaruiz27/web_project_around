@@ -73,7 +73,12 @@ background-image: url('../images/likeactive.svg');
     background-color: black;
 
 }
+.card__counter{
+    position: relative;
+    top: 18px;
+    left:9px;
 
+}
 .card__text {
     font-size: 24px;
     font-weight: 900;

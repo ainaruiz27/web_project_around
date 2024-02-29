@@ -46,3 +46,14 @@ export function handleLikeIcon(cardElement) {
 export function handleDeleteCard(cardElement) {
   cardElement.remove();
 }
+/*
+export function remotedelateCard(api, cardsSection, card_id) {
+  api.deleteCard(idCard).then(() => {
+    api.getCards().then((cards))=> {
+      cardSection.setItems(cards);
+      cardSection.renderer();
+
+    });
+}
+
+*/
