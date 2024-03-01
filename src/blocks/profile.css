@@ -22,10 +22,18 @@
     }
 }
 
+.profile__avatar-container{
+   position: relative;
+}
 .profile__avatar {
     border-radius: 50%;
     margin-right: 40px;
+    min-width:120px;
+    max-width:120px;
+    max-height: 120px;
+    
 }
+
 
 @media screen and (max-width:767px) {
     .profile__avatar {
@@ -37,7 +45,27 @@
 
     }
 }
+.profile__overlay{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 40px;
+    width:120px;
+    height: 120px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+}
+.profile__overlay:hover {
+    transition: all 0.3s ease;
+}
+.profile__overlay-button{
+    position: absolute;
+    z-index: 6;
 
+}
 .profile__info-div {
     display: block;
 }
@@ -80,6 +108,7 @@
     grid-area: button;
     margin-top: 15px;
     transition: ease 0.3;
+    z-index: 10;
 }
 
 

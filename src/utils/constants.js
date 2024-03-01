@@ -46,3 +46,4 @@ export const formConfig = {
 };
 
 export const avatarNode = document.querySelector('.profile__avatar');
+export const buttonAvatar = document.querySelector('.profile__overlay-button');

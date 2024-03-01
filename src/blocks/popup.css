@@ -36,6 +36,10 @@
         height: 322px;
     }
 }
+.form_edit-avatar{
+    max-width: 430px;
+    max-height: 272px;
+}
 
 .popup__close-icon {
     position: absolute;

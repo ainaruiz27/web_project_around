@@ -1,7 +1,7 @@
 import Card from "./Card.js";
 import FormValidator from "./FormValidator.js";
 import PopupWithImage from "./PopupWithImage.js";
-import { initialCards, formConfig, avatarNode } from "./utils/constants.js";
+import { initialCards, formConfig, avatarNode, buttonAvatar } from "./utils/constants.js";
 import Section from "./Section.js";
 import UserInfo from "./UserInfo.js";
 import PopupWithForm from "./PopupWithForm.js";
@@ -9,6 +9,7 @@ import { api } from "./utils/Api.js";
 import './index.css';
 import PopupWithConfirmation from "./PopupWithConfirmation.js";
 
+console.log(buttonAvatar);
 
 const formProfile = document.querySelector(".form.form_profile");
 const btnSave = document.querySelector(".profile__info-editbutton");
@@ -81,7 +82,7 @@ api.getUserInfo().then(dataUser => {
 })
 
 function handleProfileFormSubmit({ name, about }) {
-  api.updateUserInfo().then(user => {
+  api.updateUser().then(user => {
     userInfo.setUserInfo({ name, job: about });
   })
 }
@@ -129,7 +130,8 @@ btnAddItem.addEventListener("click", function () {
   popupObjAddCard.open();
 });
 
-avatarNode.addEventListener('click', () => {
+
+buttonAvatar.addEventListener('click', () => {
   popupAvatar.open();
 })
 

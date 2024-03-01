@@ -54,7 +54,12 @@
             </header>
         </div>
         <section class="profile">
-            <img class="profile__avatar " src="<%=require('./images/Avatar.jpg') %>" alt="Avatar">           
+            <div class="profile__avatar-container">
+                <img class="profile__avatar " src="<%=require('./images/Avatar.jpg') %>" alt="Avatar">
+                <div class="profile__overlay">
+                <img class="profile__overlay-button" src="<%=require('./images/Vector1.png') %>">
+            </div>
+            </div>
             <div class="profile__info-div">
                 <div class="profile__info">
                     <h2 class="profile__info-name">
@@ -90,7 +95,7 @@
             <form class="form form_edit-avatar " novalidate>
                 <button class="popup__close-icon" id="close-edit-avatar" type="button"></button>
                 <h2 class="form__title">Cambiar foto de perfil</h2>
-                <label for="new-avatar-link" class="form__label">Nuevo enlace de foto de perfil:</label>
+                <label for="new-avatar-link" class="form__label"></label>
                 <input type="url" id="new-avatar-link" name="newAvatarLink" class="form__input"
                     placeholder="Ingrese el nuevo enlace" required>
                 <span class="new-avatar-link-error error-message"></span>
