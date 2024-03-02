@@ -20,20 +20,24 @@ class Api {
         }).then(response => response.json());
     }
 
-    updateUser(name, about) {
-        return fetch(`${this._url}/cards`, {
+    updateUser({name = null, about = null, avatar = null}) {
+        const params = {};
+        if(avatar){
+            params.avatar = avatar;
+        }else{
+            params.name = name;
+            params.about = about;            
+        }
+        return fetch(`${this._url}/users/me${avatar? '/avatar': ''}`, {
             headers: {
                 "authorization": this._token,
                 "Content-Type": "application/json"
             },
             method: "PATCH",
-            body: JSON.stringify({
-                name,
-                about,
-            }),
+            body: JSON.stringify(params),
         }).then(response => response.json());
     }
-
+/*
     updateAvatar(avatar) {
         return fetch(`${this._url}/users/me/avatar`, {
             headers: {
@@ -46,7 +50,7 @@ class Api {
             
             }),
         }).then(response => response.json());
-    }
+    }*/
 
     addCard(link, title) {
         return fetch(`${this._url}/cards`, {

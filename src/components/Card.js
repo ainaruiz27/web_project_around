@@ -1,4 +1,4 @@
-import { handleLikeIcon, handleDeleteCard } from "./utils/utils.js";
+import { handleLikeIcon, handleDeleteCard } from "../utils/utils.js";
 export default class Card {
   constructor
     (link,title,selector, handleCardClick, handleLike,
