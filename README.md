@@ -98,3 +98,5 @@ LINK PROYECTO: https://github.com/ainaruiz27/web_project_around.git
 LINK Pagina: https://ainaruiz27.github.io/web_project_around
 ### Planes para mejorar el proyecto
 Debemos seguir trabajando para poder agregar interactividad y funcionalidad a la páginas web.
+#Proyecto 10
+

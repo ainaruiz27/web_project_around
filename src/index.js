@@ -1,13 +1,13 @@
-import Card from "./Card.js";
-import FormValidator from "./FormValidator.js";
-import PopupWithImage from "./PopupWithImage.js";
+import Card from "./components/Card.js";
+import FormValidator from "./components/FormValidator.js";
+import PopupWithImage from "./components/PopupWithImage.js";
 import { initialCards, formConfig, avatarNode, buttonAvatar } from "./utils/constants.js";
-import Section from "./Section.js";
-import UserInfo from "./UserInfo.js";
-import PopupWithForm from "./PopupWithForm.js";
+import Section from "./components/Section.js";
+import UserInfo from "./components/UserInfo.js";
+import PopupWithForm from "./components/PopupWithForm.js";
 import { api } from "./utils/Api.js";
-import './index.css';
-import PopupWithConfirmation from "./PopupWithConfirmation.js";
+import './page/index.css';
+import PopupWithConfirmation from "./components/PopupWithConfirmation.js";
 
 console.log(buttonAvatar);
 
@@ -82,13 +82,13 @@ api.getUserInfo().then(dataUser => {
 })
 
 function handleProfileFormSubmit({ name, about }) {
-  api.updateUser().then(user => {
+  return api.updateUser({about, name}).then(user => {
     userInfo.setUserInfo({ name, job: about });
   })
 }
 
 function handleAddFormSubmit({ title, link }) {
-  api.addCard(link, title).then(card => {
+  return api.addCard(link, title).then(card => {
     const newCard = new Card(link, title, ".template-card",
       (link, title) => {
         popupObjImage.open({ src: link, alt: title });
@@ -114,7 +114,7 @@ function handleAddFormSubmit({ title, link }) {
 }
 
 function handleAvatarFormSubmit({newAvatarLink}) {
-  api.updateAvatar(newAvatarLink).then(() => {
+  return api.updateUser({avatar: newAvatarLink}).then(() => {
     userInfo.setAvatar(newAvatarLink);    
   })
 }
