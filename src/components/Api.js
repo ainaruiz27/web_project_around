@@ -37,20 +37,6 @@ class Api {
             body: JSON.stringify(params),
         }).then(response => response.json());
     }
-/*
-    updateAvatar(avatar) {
-        return fetch(`${this._url}/users/me/avatar`, {
-            headers: {
-                "authorization": this._token,
-                "Content-Type": "application/json"
-            },
-            method: "PATCH",
-            body: JSON.stringify({
-                
-            
-            }),
-        }).then(response => response.json());
-    }*/
 
     addCard(link, title) {
         return fetch(`${this._url}/cards`, {
@@ -99,20 +85,4 @@ class Api {
 }
 
 export const api = new Api('https://around.nomoreparties.co/v1/web_es_11', 'e261a8b3-b4ff-46a8-9ab6-ef7a9f75bcee');
-
-/*   addLike(idCard) {
-   }
-
-   removeLike(idCard) {
-   }
-
-   removeCard(idCard) {
-
-   }
-
-   updateUserInfo(name, about) {
-   }
-
-   updateAvatar(link) {
-   }*/
 
