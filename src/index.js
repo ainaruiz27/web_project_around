@@ -5,11 +5,10 @@ import { initialCards, formConfig, avatarNode, buttonAvatar } from "./utils/cons
 import Section from "./components/Section.js";
 import UserInfo from "./components/UserInfo.js";
 import PopupWithForm from "./components/PopupWithForm.js";
-import { api } from "./utils/Api.js";
+import { api } from "./components/Api.js";
 import './page/index.css';
 import PopupWithConfirmation from "./components/PopupWithConfirmation.js";
 
-console.log(buttonAvatar);
 
 const formProfile = document.querySelector(".form.form_profile");
 const btnSave = document.querySelector(".profile__info-editbutton");
@@ -63,12 +62,12 @@ api.getUserInfo().then(dataUser => {
           },
           /* handleDeleteCard */
           (cardId, cardNode) => {
-            console.log('borrar')
             popupWithConfirmation.open(              
               () => {
                 api.deleteCard(cardId).then(() => {
                   cardNode.remove();
                 });
+                api.getCards()
               }
             );          
           },
