@@ -88,28 +88,34 @@ function handleProfileFormSubmit({ name, about }) {
 
 function handleAddFormSubmit({ title, link }) {
   return api.addCard(link, title).then(card => {
-    const newCard = new Card(link, title, ".template-card",
+    const newCard = new Card(
+      link,
+      title,
+      ".template-card",
       (link, title) => {
         popupObjImage.open({ src: link, alt: title });
       },
-      /* handleLike */
+
       (cardId) => {
         return api.addLike(cardId)
       },
-      
+
       (cardId) => {
         return api.removeLike(cardId)
       },
-    
-      (cardId) => {
 
-        return api.deleteCard(cardId);
+      (cardId, cardNode) => {
+        popupWithConfirmation.open(() => {
+          return api.deleteCard(cardId).then(() => {
+            cardNode.remove();
+          });
+        });
       },
       card,
       user
     );
     cardsSection.addItem(newCard.generateCard(), false);
-  })
+  });
 }
 
 function handleAvatarFormSubmit({newAvatarLink}) {
